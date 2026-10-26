@@ -518,6 +518,22 @@ footer .fsub { align-items: center; gap: 16px; }
 footer .fsub a.totop { display: inline-grid; place-items: center; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; color: var(--muted); background: var(--surface); }
 footer .fsub a.totop:hover { color: var(--accent); border-color: var(--accent); }
 footer .fsub a.totop svg { width: 16px; height: 16px; }
+
+/* more-work auto scroller */
+.mq { overflow-x: auto; overflow-y: hidden; scroll-behavior: auto; scrollbar-width: none; cursor: grab; touch-action: pan-x pan-y; -webkit-overflow-scrolling: touch; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.mq::-webkit-scrollbar { display: none; }
+.mq.drag { cursor: grabbing; user-select: none; }
+.mq-track { display: flex; gap: 16px; width: max-content; }
+.mq-head { display: flex; align-items: center; justify-content: space-between; margin: 40px 0 16px; }
+.mq-head .eyebrow { margin: 0 !important; }
+.mq-nav { display: flex; gap: 8px; }
+.mq-btn { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2); color: var(--fg); cursor: pointer; transition: border-color .2s, color .2s; }
+.mq-btn:hover { border-color: var(--accent); color: var(--accent); }
+.mq-btn svg { width: 16px; height: 16px; }
+.mq .card { width: 340px; flex: none; display: flex; flex-direction: column; }
+.mq .card h3 { font-family: var(--font-display); font-size: 1.1rem; letter-spacing: -0.01em; text-transform: none; color: var(--fg); font-weight: 700; margin-bottom: 6px; display: block; }
+.mq .card .who { font-family: var(--font-mono); font-size: 11.5px; color: var(--accent); margin-bottom: 8px; display: block; }
+.mq .card .stackline { margin-top: auto; padding-top: 10px; }
 </style>
 
 <header class="nav">
@@ -540,10 +556,10 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
 <main class="wrap">
   <div class="hero" id="home">
     <div>
-      <div class="strip"><span>Senior AI/ML Engineer</span><span class="mid">Python · LangChain · RAG · FastAPI · AWS</span><span class="avail"><i class="dot"></i>Available</span></div>
+      <div class="strip"><span>Senior AI/ML Engineer</span><span class="mid">Python · LangChain · RAG · FastAPI · Azure</span><span class="avail"><i class="dot"></i>Available</span></div>
     </div>
     <h1>Aliza <em>Mustafa</em></h1>
-    <div class="hero-row"><p class="lede">I build multi-agent AI systems that run live in United States healthcare: clinical documentation, retrieval and voice quality systems that physicians and care teams actually depend on.</p>
+    <div class="hero-row"><p class="lede">I lead a 14-person team building multi-agent AI systems that run live in United States healthcare: clinical documentation, retrieval and voice quality systems that physicians and care teams actually depend on.</p>
     <div class="hero-actions"><div class="cta">
       <a class="btn primary" href="#projects">View My Work <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
       <a class="btn" href="#contact">Get In Touch</a>
@@ -556,9 +572,9 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
     </div></div></div>
 
     <div class="stats">
-      <div class="stat"><div class="k">Scale</div><div class="v">5 EHR systems</div><div class="s">largest system shipped · IntelliMed AI</div></div>
-      <div class="stat"><div class="k">Shipped</div><div class="v">8 systems</div><div class="s">client work &amp; solo builds</div></div>
-      <div class="stat"><div class="k">Live products</div><div class="v">2 live</div><div class="s">IntelliMed AI · Voice Audit AI</div></div>
+      <div class="stat"><div class="k">Scale</div><div class="v">4 US clinics</div><div class="s">live on IntelliMed AI · 5 EHR integrations</div></div>
+      <div class="stat"><div class="k">Shipped</div><div class="v">10 systems</div><div class="s">shipped for US healthcare clients</div></div>
+      <div class="stat"><div class="k">Live products</div><div class="v">9 live</div><div class="s">IntelliMed · Voice Audit · AIMA · QPS · MIRA · PSR</div></div>
     </div>
 
     <div class="pipe">
@@ -601,10 +617,11 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
           <path class="flow slow" d="M510,308 H820 V192"/>
 
           <g class="node">
-            <rect x="10" y="128" width="140" height="64" rx="10" fill="url(#f-src)" stroke="#4a5a4b"/>
-            <text class="t" x="24" y="153">EMR + visits</text>
-            <text class="s" x="24" y="170">DrChrono, Athena,</text>
-            <text class="s" x="24" y="183">Azalea, transcripts</text>
+            <rect x="10" y="121" width="140" height="80" rx="10" fill="url(#f-src)" stroke="#4a5a4b"/>
+            <text class="t" x="24" y="143">EMR + visits</text>
+            <text class="s" x="24" y="160">DrChrono, Athena,</text>
+            <text class="s" x="24" y="173">Azalea, ModMed,</text>
+            <text class="s" x="24" y="186">eCW, transcripts</text>
           </g>
           <g class="node n-pulse">
             <rect x="190" y="128" width="140" height="64" rx="10" fill="url(#f-summar)" stroke="var(--c-summar)"/>
@@ -650,8 +667,8 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
     <div class="about-grid">
       <div class="prose">
         <p>I'm an ML Engineer who builds AI that ships. I graduated in Computer Science from <strong>COMSATS University Islamabad</strong> as a silver medalist, then won a <strong>China Government Scholarship</strong> and spent three years leading a machine learning research lab at <strong>Shanghai Jiao Tong University</strong>, where I built GrammatiFix.</p>
-        <p>Today at <strong>Hawklogix</strong> in Lahore I build AI for US healthcare: <strong>IntelliMed AI</strong>, a five-agent clinical platform live at a Knoxville clinic and presented at <strong>HIMSS26</strong>, and <strong>Voice Audit AI</strong>, a call-quality system live at a US telehealth provider.</p>
-        <p>From agent pipelines to RAG over medical records to speech scoring, I take systems from idea to production.</p>
+        <p>Today at <strong>Hawklogix</strong> in Lahore I am the lead AI engineer behind <strong>IntelliMed AI</strong>, a HIPAA-compliant five-agent clinical platform in daily production at <strong>four US clinics</strong> and presented at the <strong>HIMSS26 Conference</strong> in Las Vegas, and <strong>Voice Audit AI</strong>, which audits <strong>300–400 calls a day</strong> for a US telehealth provider.</p>
+        <p>I lead a <strong>14-person team</strong>, mentor <strong>8 engineers</strong>, take part in sprint planning and clarify requirements directly with physicians and clients. From agent pipelines to RAG over medical records to speech scoring, I take systems from idea to production.</p>
       </div>
       <div class="cards">
         <div class="card"><h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education</h3>
@@ -677,6 +694,25 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
         </div>
       </div>
     </div>
+
+    <div class="metrics" style="margin-top:36px">
+      <div class="metric"><b>14 engineers</b><span>team led, from sprint planning to delivery</span></div>
+      <div class="metric"><b>8 engineers</b><span>mentored across AI projects</span></div>
+      <div class="metric"><b>4 US clinics</b><span>IntelliMed AI in daily production</span></div>
+      <div class="metric"><b>70–170</b><span>patients served a day</span></div>
+      <div class="metric"><b>300–400</b><span>calls audited a day by Voice Audit AI</span></div>
+      <div class="metric"><b>~80%</b><span>QA efficiency gain, 25–45 min audits down to 1–2</span></div>
+    </div>
+
+    <h3 class="eyebrow" style="margin:40px 0 16px;font-weight:400">Leadership and recognition</h3>
+    <div class="more">
+      <div class="card"><span class="who">Hawklogix · Lead AI Engineer</span><h3>Leading the team</h3><p>Lead a 14-person team: assign tasks, run sprint planning and own delivery of both flagship systems, designed, built and led end to end.</p><div class="chips stackline"><span class="chip">Team leadership</span><span class="chip">Sprint planning</span><span class="chip">Delivery ownership</span></div></div>
+      <div class="card"><span class="who">Mentorship</span><h3>Growing engineers</h3><p>Mentor 8 engineers across the team's AI projects, from model training to production deployment.</p><div class="chips stackline"><span class="chip">Mentoring</span><span class="chip">Team enablement</span></div></div>
+      <div class="card"><span class="who">Clients and physicians</span><h3>Requirements to production</h3><p>Clarify requirements directly with physicians and clients, then carry them through design, build, deployment and monitoring.</p><div class="chips stackline"><span class="chip">Stakeholder alignment</span><span class="chip">Requirements</span><span class="chip">Deployment</span></div></div>
+      <div class="card"><span class="who">March 2026 · Las Vegas</span><h3>HIMSS26 Conference</h3><p>IntelliMed AI presented by the team at the HIMSS26 Conference in Las Vegas.</p><div class="chips stackline"><span class="chip">Clinical AI</span><span class="chip">HIMSS26 Conference</span></div></div>
+      <div class="card"><span class="who">2017 · Chinese Ministry of Education</span><h3>CSC Scholarship Top Scorer</h3><p>Top Scorer Award on the China Government Scholarship, followed by graduate coursework at Shanghai Jiao Tong University (3.37 CGPA).</p><div class="chips stackline"><span class="chip">Scholarship</span><span class="chip">SJTU</span></div></div>
+      <div class="card"><span class="who">2016 · COMSATS University</span><h3>Silver Medal</h3><p>BS Computer Science at COMSATS University Islamabad, graduating with a silver medal.</p><div class="chips stackline"><span class="chip">Computer Science</span><span class="chip">Silver Medal</span></div></div>
+    </div>
   </section>
 
   <section id="experience">
@@ -689,21 +725,26 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
         <div class="xcard">
           <span class="xdate">Oct 2023 — Present</span>
           <h3>ML Engineer <span class="at">@ Hawklogix</span></h3>
-          <p class="xsub">Multi-agent clinical AI, RAG, voice and triage systems for US healthcare · Lahore, Pakistan</p>
+          <p class="xsub">Lead AI engineer · multi-agent clinical AI, RAG, voice and QA systems for US healthcare · Lahore, Pakistan</p>
           <div class="xlive">
             <p class="xlive-h"><i></i>LIVE CLIENT DEPLOYMENTS</p>
             <div class="xpills">
               <span class="xpill">NeuroHeart and Vascular Clinic — IntelliMed AI</span>
+              <span class="xpill">Knox Foot and Ankle — IntelliMed AI</span>
+              <span class="xpill">Cardiology Consultant — IntelliMed AI</span>
+              <span class="xpill">Hope Neurology — IntelliMed AI</span>
               <span class="xpill">TeleSpecialists — Voice Audit AI</span>
             </div>
           </div>
           <ul class="xul">
-            <li>Architected <strong>IntelliMed AI</strong>: five connected agents that turn EMR data and visit transcripts into finished, billed clinical documentation, across <strong>five EHR integrations</strong> (OAuth, FHIR).</li>
-            <li>Automated <strong>ICD-10 and CPT coding</strong>, cutting billing errors by nearly half.</li>
-            <li>Built <strong>Voice Audit AI</strong>: call audits from 25–45 minutes down to 1–2, about <strong>6x throughput</strong>, +15% customer satisfaction.</li>
-            <li>Built the <strong>Medical EMR Chatbot</strong> (hybrid RAG), the <strong>AI Triage Assistant</strong> and <strong>IT Help Desk QA</strong> (48% fewer misrouted tickets) for TeleSpecialists.</li>
+            <li>Lead AI engineer for <strong>IntelliMed AI</strong>: five connected agents (Summar, Penny, Clara, Bill, Lexi) plus <strong>MIRA</strong>, an AI receptionist, in daily production at <strong>four US clinics</strong> serving 70–170 patients a day across <strong>five EHR integrations</strong> (OAuth, FHIR). Presented at the <strong>HIMSS26 Conference</strong>, Las Vegas.</li>
+            <li>Lead a <strong>14-person team</strong>, mentor <strong>8 engineers</strong>, take part in sprint planning and clarify requirements directly with physicians and clients.</li>
+            <li>Automated <strong>ICD-10, CPT and MIPS coding</strong>, cutting billing errors by nearly half; a physician's full documentation flow now takes about 2 minutes.</li>
+            <li>Designed, built and led <strong>Voice Audit AI</strong> for TeleSpecialists: 300–400 calls audited a day, audit time down from 25–45 to 1–2 minutes, about <strong>80% QA efficiency gain</strong>, +15% customer satisfaction. Manual audit was discontinued after go-live.</li>
+            <li>Built <strong>PSR</strong> (insurance-verification call auditing for RCM), <strong>QPS</strong> (post-stroke follow-up calls), <strong>IT Help Desk QA</strong> (48% fewer misrouted tickets), the <strong>Clinical Nursing Insight Extractor</strong>, the <strong>Medical EMR Chatbot</strong> (hybrid RAG), <strong>AIMA</strong> voice intake and the <strong>AI Triage Assistant</strong>.</li>
+            <li>Production engineering: prompt caching with a costing dashboard, a 4-layer prompt-injection shield, Docker on Azure App Service with staging-slot releases and tag-based rollback, CI/CD on every project, and Application Insights plus Azure Monitor alerts to the on-call engineer.</li>
           </ul>
-          <div class="xchips"><span>Python</span><span>LangChain</span><span>FastAPI</span><span>Qdrant</span><span>Azure</span><span>Docker</span></div>
+          <div class="xchips"><span>Python</span><span>LangChain</span><span>LangGraph</span><span>Claude</span><span>FastAPI</span><span>Qdrant</span><span>Deepgram</span><span>QLoRA</span><span>Azure</span><span>Docker</span></div>
         </div>
       </article>
       <article class="xitem">
@@ -713,10 +754,11 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
           <h3>ML Specialist <span class="at">@ TutorEye Inc</span></h3>
           <p class="xsub">TradeSphere and PortfolioPulse · Remote, California, USA</p>
           <ul class="xul">
-            <li>Shipped machine learning work across the platform's products, including <strong>TradeSphere</strong> and <strong>PortfolioPulse</strong>.</li>
+            <li><strong>TradeSphere</strong> (Django e-commerce platform): integrated a recommendation system for personalized product suggestions, built customer segmentation models and applied predictive analytics and dynamic pricing optimization.</li>
+            <li><strong>PortfolioPulse</strong>: applied advanced feature selection (feature fusion) and reinforcement learning (PPO) to improve investment strategies, returns and risk-adjusted performance.</li>
             <li>Worked fully remotely with a US-based team across time zones.</li>
           </ul>
-          <div class="xchips"><span>Python</span><span>Machine Learning</span><span>NLP</span></div>
+          <div class="xchips"><span>Python</span><span>Django</span><span>Reinforcement Learning</span><span>Recommenders</span></div>
         </div>
       </article>
       <article class="xitem">
@@ -726,10 +768,10 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
           <h3>ML Lab Research Lead <span class="at">@ SJTU</span></h3>
           <p class="xsub">Shanghai Innovation Center for Big Data · GrammatiFix, grammatical error correction</p>
           <ul class="xul">
-            <li>Led machine learning research at the center's ML lab while completing graduate coursework at Shanghai Jiao Tong University.</li>
-            <li>Built <strong>GrammatiFix</strong>, a context-aware grammatical error correction system.</li>
+            <li>Led machine learning research at the center's ML lab while completing graduate coursework at Shanghai Jiao Tong University on a <strong>CSC Scholarship</strong> (3.37 CGPA).</li>
+            <li>Built <strong>GrammatiFix</strong>, a context-aware grammatical error correction system on Facebook FAIRSeq: a hybrid multi-layer CNN encoder with an attention-based LSTM decoder, evaluated on CoNLL-2014 and NAIST Lang-8, outperforming prior SMT approaches.</li>
           </ul>
-          <div class="xchips"><span>Python</span><span>NLP</span><span>Deep Learning</span></div>
+          <div class="xchips"><span>Python</span><span>PyTorch</span><span>FAIRSeq</span><span>NLP</span><span>Deep Learning</span></div>
         </div>
       </article>
     </div>
@@ -741,40 +783,51 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
     <h2 class="sec">Selected work I'm proud of</h2>
 
     <article class="proj-card flag">
-      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Flagship</span><span class="ptag alt">Presented at HIMSS26</span></div></div>
+      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Flagship</span><span class="ptag alt">Presented at HIMSS26 Conference, Las Vegas</span></div></div>
       <h3>IntelliMed AI</h3>
-      <p class="role">Lead AI Engineer, Hawklogix · HIMSS26, Las Vegas, March 2026 · Client: NeuroHeart and Vascular Clinic, Knoxville, USA</p>
-      <p class="prose">IntelliMed AI is a multi-agent platform that carries a patient visit from raw data to finished, billed clinical documentation. Five specialized agents work as one pipeline: Summar reads the chart, Penny writes the documentation, Clara checks the clinical logic, Bill codes the billing, and Lexi runs the administrative workflow around them.</p>
+      <p class="role">Lead AI Engineer, Hawklogix · HIMSS26 Conference, Las Vegas, March 2026 · Live at NeuroHeart and Vascular Clinic, Knox Foot and Ankle, Cardiology Consultant and Hope Neurology</p>
+      <p class="prose">IntelliMed AI is a multi-agent platform that carries a patient visit from raw data to finished, billed clinical documentation. Five specialized agents work as one pipeline: Summar reads the chart, Penny writes the documentation, Clara checks the clinical logic, Bill codes the billing, and Lexi runs the administrative workflow around them, while MIRA, a separate AI receptionist, checks patients in at the front desk. It is in daily production at four US clinics, used by 9–10 physicians plus medical assistants and nurses.</p>
       <div class="metrics">
         <div class="metric"><b>5 agents</b><span>working as one pipeline</span></div>
         <div class="metric"><b>5 EHRs</b><span>live integrations, OAuth and FHIR</span></div>
         <div class="metric"><b>~50% fewer</b><span>billing errors from automated coding</span></div>
+        <div class="metric"><b>4 clinics</b><span>in daily production across the US</span></div>
+        <div class="metric"><b>70–170</b><span>patients served a day</span></div>
+        <div class="metric"><b>~2 min</b><span>a physician's full documentation flow</span></div>
       </div>
       <div class="agents">
-        <div class="agent" style="--c:var(--c-summar)"><div class="nm"><i></i><span>Summar<small>chart reader</small></span></div><p>Builds structured patient summaries from EMR data (DrChrono, Athenahealth, Azalea) and uploaded documents, in default, custom and template modes.</p></div>
-        <div class="agent" style="--c:var(--c-penny)"><div class="nm"><i></i><span>Penny<small>Scribed</small></span></div><p>Writes the clinical documentation: SOAP notes, surgical and radiology procedure notes, transcription, physician custom templates, magic edit and orders generation.</p></div>
-        <div class="agent" style="--c:var(--c-clara)"><div class="nm"><i></i><span>Clara<small>clinical intelligence</small></span></div><p>Contradiction detection, gap analysis, evidence-based recommendations drawn from PubMed and guidelines, risk alerts and confidence scores.</p></div>
-        <div class="agent" style="--c:var(--c-bill)"><div class="nm"><i></i><span>Bill<small>billing automation</small></span></div><p>Assigns ICD-10 and CPT codes directly from Penny's documentation.</p></div>
-        <div class="agent" style="--c:var(--c-lexi)"><div class="nm"><i></i><span>Lexi<small>admin workflow</small></span></div><p>Inbound and outbound fax dashboard, automatic physician task generation from fax content, document routing.</p></div>
+        <div class="agent" style="--c:var(--c-summar)"><div class="nm"><i></i><span>Summar<small>chart reader</small></span></div><p>Builds structured patient summaries on a LangGraph state graph with branching, retry loops, parallel execution and crash-resume state. Long charts are chunked by encounter, summarized in parallel on Claude Sonnet, merged, then verified. Three physician modes: a fixed 7-section default, the physician's own template, or a custom form PDF whose field names form an allow-list, with missing values omitted and never invented. Scanned PDFs pass a 4-engine OCR cascade.</p></div>
+        <div class="agent" style="--c:var(--c-penny)"><div class="nm"><i></i><span>Penny<small>Scribed</small></span></div><p>Writes structured SOAP notes from four parallel section calls (history, review of systems, assessment and plan, physical exam), merged and cleaned, plus surgical and radiology procedure notes and notes in the physician's own templates. The live conversation is the source of truth; undocumented fields are marked Not Mentioned and stripped from the final note.</p></div>
+        <div class="agent" style="--c:var(--c-clara)"><div class="nm"><i></i><span>Clara<small>clinical intelligence</small></span></div><p>Contradiction alerts from old-versus-new history, medications, allergies and plan-versus-history checks, plus evidence-based recommendations from PubMed (top abstracts per diagnosis), each with its source link and a confidence score weighted 70% on evidence quality and 30% on quantity. Unsourced recommendations are dropped.</p></div>
+        <div class="agent" style="--c:var(--c-bill)"><div class="nm"><i></i><span>Bill<small>billing automation</small></span></div><p>Exactly one CPT per visit, ICD-10 limited to diagnoses documented in the note and valid 2026 codes, and MIPS measures only when the insurer is Medicare or Medicaid. CPT goes to GPT first and ICD-10 and MIPS to Claude first, with cross-model fallback. Output is codes with a short reason each, no amounts and no claim submission.</p></div>
+        <div class="agent" style="--c:var(--c-lexi)"><div class="nm"><i></i><span>Lexi<small>admin workflow</small></span></div><p>Inbound and outbound fax management with automatic physician-task generation and document routing, on an OCR service that classifies and extracts referral, lab, insurance and imaging documents. Also powers Magic Edit, which revises a note from a plain-English instruction, changing only what is asked and never inventing clinical facts.</p></div>
       </div>
       <div class="pbody" style="margin-top:24px">
         <div>
           <h4>Highlights</h4>
           <ul class="hl">
-            <li>Sequential pipeline: Summar feeds Penny; Clara and Bill run in parallel; Lexi works semi-independently.</li>
+            <li>Sequential pipeline: Summar feeds Penny; Clara and Bill run in parallel; Lexi works semi-independently; MIRA runs independently at the front desk.</li>
             <li>Five live EHR integrations, including OAuth token services and FHIR endpoints.</li>
             <li>Specialty-aware generation with relevance verification, so output stays tied to the right clinical specialty.</li>
             <li>Incremental summary merging that never drops earlier data when new documents arrive.</li>
             <li>Billing errors cut by nearly half through automated ICD-10 and CPT assignment.</li>
+            <li>Production LLM controls: prompt caching on all prompts (1-hour TTL) with a costing dashboard that reports cost with and without caching.</li>
+            <li>4-layer prompt-injection shield on pasted text: normalization, pattern detection and MiniLM similarity against about 90 known attack examples.</li>
+            <li>Guardrails: a 40k input-token limit, generate only from the source text, dates, numbers and medications copied exactly, and a verification step that checks claims against the source.</li>
+            <li>Delivery: Docker on Azure App Service, new versions tested in a staging slot then swapped, image tags in Azure Container Registry for rollback, CI/CD on every project.</li>
+            <li>Monitoring: call-ID logging with no patient information in logs, Log Analytics and Application Insights, health-check auto-restart and Azure Monitor alerts by email and Teams to the on-call engineer.</li>
+            <li>In development: a Prior Auth AI Agent for NeuroHeart.</li>
           </ul>
         </div>
         <div class="stack">
-          <div class="row"><h4>LLM and Agents</h4><div class="chips"><span class="chip">Multi-agent orchestration</span><span class="chip">LangChain</span><span class="chip">Anthropic Claude API</span><span class="chip">Prompt engineering</span><span class="chip">Structured JSON output</span><span class="chip">Output validation and retries</span><span class="chip">Specialty-relevance guardrails</span></div></div>
-          <div class="row"><h4>Generation</h4><div class="chips"><span class="chip">SOAP and procedure notes</span><span class="chip">Template-driven generation</span><span class="chip">Quill custom templates</span><span class="chip">Summary merge engine</span><span class="chip">Transcription</span></div></div>
-          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">REST APIs</span><span class="chip">Docker</span></div></div>
-          <div class="row"><h4>Documents and Data</h4><div class="chips"><span class="chip">Azure Blob Storage</span><span class="chip">OCR</span><span class="chip">Document classification</span><span class="chip">PDF processing</span></div></div>
-          <div class="row"><h4>EHR Integrations</h4><div class="chips"><span class="chip">DrChrono</span><span class="chip">Athenahealth</span><span class="chip">eClinicalWorks</span><span class="chip">ModMed</span><span class="chip">Azalea</span><span class="chip">FHIR</span><span class="chip">OAuth 2.0</span><span class="chip">PubMed API</span></div></div>
+          <div class="row"><h4>LLM and Agents</h4><div class="chips"><span class="chip">Multi-agent orchestration</span><span class="chip">LangGraph state graphs</span><span class="chip">LangChain</span><span class="chip">Anthropic Claude API</span><span class="chip">OpenAI API</span><span class="chip">Cross-model fallback</span><span class="chip">Prompt engineering</span><span class="chip">Structured JSON output</span><span class="chip">Output validation and retries</span></div></div>
+          <div class="row"><h4>Safety and Cost</h4><div class="chips"><span class="chip">Prompt caching</span><span class="chip">4-layer prompt-injection shield</span><span class="chip">MiniLM similarity detection</span><span class="chip">Input-token limits</span><span class="chip">Source-grounded generation</span><span class="chip">Claim verification</span><span class="chip">Costing dashboard</span></div></div>
+          <div class="row"><h4>Generation</h4><div class="chips"><span class="chip">SOAP and procedure notes</span><span class="chip">Template-driven generation</span><span class="chip">Quill custom templates</span><span class="chip">Summary merge engine</span><span class="chip">Magic Edit</span><span class="chip">Transcription</span></div></div>
+          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">REST APIs</span><span class="chip">SQL Server</span><span class="chip">Docker</span></div></div>
+          <div class="row"><h4>Documents and OCR</h4><div class="chips"><span class="chip">DocTR</span><span class="chip">Tesseract</span><span class="chip">EasyOCR</span><span class="chip">Docling</span><span class="chip">YOLO detection</span><span class="chip">Azure Blob Storage</span><span class="chip">Document classification</span></div></div>
+          <div class="row"><h4>EHR Integrations</h4><div class="chips"><span class="chip">DrChrono</span><span class="chip">Athenahealth</span><span class="chip">eClinicalWorks</span><span class="chip">ModMed</span><span class="chip">Azalea</span><span class="chip">EHR 360</span><span class="chip">ClaimMD</span><span class="chip">FHIR</span><span class="chip">OAuth 2.0</span><span class="chip">PubMed API</span></div></div>
           <div class="row"><h4>Clinical Coding</h4><div class="chips"><span class="chip">ICD-10</span><span class="chip">CPT</span><span class="chip">MIPS</span></div></div>
+          <div class="row"><h4>Cloud and Ops</h4><div class="chips"><span class="chip">Azure App Service</span><span class="chip">Azure Container Registry</span><span class="chip">Log Analytics</span><span class="chip">Application Insights</span><span class="chip">Azure Monitor</span><span class="chip">GitHub Actions</span></div></div>
         </div>
       </div>
     </article>
@@ -782,116 +835,182 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
     <article class="proj-card">
       <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.08 4.18 2 2 0 0 1 4.06 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Voice AI</span></div></div>
       <h3>Voice Audit AI</h3>
-      <p class="role">Designed, built and led solo · Live in the USA, 2026 · Client: TeleSpecialists, US telehealth provider</p>
-      <p class="prose">Voice Audit AI replaced a fully manual call-review process at a US telehealth provider. Reviewers once spent 25 to 45 minutes auditing a single care call. The system now audits a call in 1 to 2 minutes, checking what was said on the call against what was entered into the system.</p>
+      <p class="role">Designed, built and led end to end · In daily use in the USA · Client: TeleSpecialists, US telehealth provider</p>
+      <p class="prose">Voice Audit AI replaced a fully manual call-review process at a US telehealth provider. Reviewers once spent 25 to 45 minutes auditing a single care call. The system now fetches recordings from Five9 Cloud and RingCentral, then transcribes, scores and audits about 300 to 400 calls a day against clinical KPIs in 1 to 2 minutes each, checking what was said on the call against what was entered into the system. Manual audit was discontinued after it went live.</p>
       <div class="metrics">
         <div class="metric"><b>25–45 → 1–2 min</b><span>audit time per call</span></div>
-        <div class="metric"><b>~6x</b><span>audit throughput</span></div>
+        <div class="metric"><b>~80%</b><span>QA efficiency gain, about 6x throughput</span></div>
         <div class="metric"><b>+15%</b><span>customer satisfaction</span></div>
+        <div class="metric"><b>300–400</b><span>calls audited a day</span></div>
+        <div class="metric"><b>9</b><span>case-type workflows, each with its own KPI matrix</span></div>
+        <div class="metric"><b>High 80s–low 90s</b><span>accuracy of the tuned speech pipeline on test sets</span></div>
       </div>
       <div class="pbody">
         <div>
           <h4>Highlights</h4>
           <ul class="hl">
-            <li>Five9 call recordings transcribed with Deepgram Nova-2 and speaker diarization, with OpenAI Whisper as fallback.</li>
+            <li>Recordings fetched from Five9 Cloud and RingCentral with Azure Blob backup, transcribed by Deepgram Nova-2 with speaker diarization as the primary engine (diarization, word-level timestamps and filler words built in, fast on telephony audio) and OpenAI Whisper as automatic fallback.</li>
             <li>GPT-based correction layer for medical terminology in transcripts.</li>
-            <li>Hybrid scoring: rule-based fuzzy and regex checks, spaCy NER and escalation phrase matching, and LLM scoring for empathy, interruption and repeat-back.</li>
-            <li>Audio silence analysis with pydub and FFmpeg.</li>
-            <li>Nine case-type workflows, each with its own KPI matrix.</li>
-            <li>TeleCare cross-validation: spoken data checked against entered data.</li>
+            <li>Hybrid scoring in three layers: rule-based fuzzy and regex matching, spaCy NER with escalation detection, and LLM scoring (GPT-3.5, Claude) across seven KPIs: greeting, response-time compliance, gather and verify, empathy, interruption handling, professionalism and repeat-back.</li>
+            <li>Rules alone could not handle phrasing variation, so ML and LLM layers were added; free-text LLM output was inconsistent, so scoring is structured JSON validated with Pydantic.</li>
+            <li>Custom-trained models: a RoBERTa case-type classifier (roberta-base, full fine-tuning, macro-F1 0.85–0.92) and Llama 3.1 8B with QLoRA on a single 24GB GPU (macro-F1 0.88–0.94), which made output consistent and ended API cost while keeping data in-company.</li>
+            <li>Empathy and professionalism scoring adds SetFit over transcripts fused with a wav2vec 2.0 speech-emotion model.</li>
+            <li>TeleCare cross-validation compares what agents asked on calls against what they entered in the system, catching data-entry mismatches manual audits miss, with automatic escalation detection for high-risk calls.</li>
+            <li>Auto-generated Excel and JSON audit reports are posted to TeleCare via API.</li>
           </ul>
         </div>
         <div class="stack">
-          <div class="row"><h4>Telephony and Speech</h4><div class="chips"><span class="chip hot">Five9</span><span class="chip">Deepgram Nova-2 ASR</span><span class="chip">OpenAI Whisper fallback</span><span class="chip">Speaker diarization</span><span class="chip">Call recording ingestion</span></div></div>
-          <div class="row"><h4>NLP and Scoring</h4><div class="chips"><span class="chip">spaCy NER</span><span class="chip">PhraseMatcher escalation detection</span><span class="chip">Fuzzy matching</span><span class="chip">Regex rule engine</span><span class="chip">LLM rubric scoring</span><span class="chip">Medical-term correction (GPT)</span></div></div>
+          <div class="row"><h4>Telephony and Speech</h4><div class="chips"><span class="chip">Five9 Cloud</span><span class="chip">RingCentral</span><span class="chip">Deepgram Nova-2 ASR</span><span class="chip">OpenAI Whisper fallback</span><span class="chip">Speaker diarization</span><span class="chip">Call recording ingestion</span></div></div>
+          <div class="row"><h4>NLP and Scoring</h4><div class="chips"><span class="chip">spaCy NER</span><span class="chip">PhraseMatcher escalation detection</span><span class="chip">Fuzzy matching</span><span class="chip">Regex rule engine</span><span class="chip">LLM rubric scoring</span><span class="chip">Pydantic validation</span><span class="chip">Medical-term correction (GPT)</span></div></div>
+          <div class="row"><h4>Custom Models</h4><div class="chips"><span class="chip">RoBERTa</span><span class="chip">Llama 3.1 8B</span><span class="chip">QLoRA</span><span class="chip">SetFit</span><span class="chip">wav2vec 2.0</span></div></div>
           <div class="row"><h4>Audio</h4><div class="chips"><span class="chip">pydub</span><span class="chip">FFmpeg</span><span class="chip">Silence and dead-air analysis</span></div></div>
-          <div class="row"><h4>Backend and Data</h4><div class="chips"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Docker</span><span class="chip">Azure Blob Storage</span></div></div>
+          <div class="row"><h4>Backend and Data</h4><div class="chips"><span class="chip">Python</span><span class="chip">Flask</span><span class="chip">Docker</span><span class="chip">Azure Blob Storage</span><span class="chip">TeleCare API</span></div></div>
           <div class="row"><h4>Domain Logic</h4><div class="chips"><span class="chip">9 case-type workflows</span><span class="chip">Per-case KPI matrices</span><span class="chip">TeleCare cross-validation</span></div></div>
         </div>
       </div>
     </article>
 
     <article class="proj-card">
-      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="ptags"><span class="ptag">Product</span><span class="ptag">RAG</span></div></div>
-      <h3>Medical EMR Chatbot</h3>
-      <p class="role">Built end to end solo · RAG system · For physicians</p>
-      <p class="prose">A conversational layer over the electronic medical record. Physicians ask questions in plain language and get grounded answers pulled from the patient's own record, instead of clicking through charts.</p>
-      <div class="pbody">
-        <div>
-          <h4>Highlights</h4>
-          <ul class="hl">
-            <li>Retrieval-augmented generation over EMR data with SapBERT embeddings and Qdrant vector search.</li>
-            <li>Hybrid dense and sparse retrieval with query-adaptive weighting and cross-encoder reranking.</li>
-            <li>Intent classification across 14 categories and collections, with question decomposition for complex queries.</li>
-            <li>Few-shot, grounded generation: answers stay tied to the record, not the model's imagination.</li>
-            <li>Automatic data purge after 48 hours for privacy.</li>
-            <li>Design target: cut physician data-retrieval time by over 90 percent.</li>
-          </ul>
-        </div>
-        <div class="stack">
-          <div class="row"><h4>Embeddings and Index</h4><div class="chips"><span class="chip">SapBERT biomedical embeddings</span><span class="chip">Qdrant vector DB</span><span class="chip">Per-category collections</span><span class="chip">Metadata filtering</span></div></div>
-          <div class="row"><h4>Retrieval</h4><div class="chips"><span class="chip">Hybrid dense + sparse retrieval</span><span class="chip">Query-adaptive weighting</span><span class="chip">Cross-encoder reranking</span><span class="chip">Top-k fusion</span></div></div>
-          <div class="row"><h4>Query Understanding</h4><div class="chips"><span class="chip">14-category intent classification</span><span class="chip">Question decomposition</span><span class="chip">Collection routing</span></div></div>
-          <div class="row"><h4>Generation</h4><div class="chips"><span class="chip">Few-shot grounded generation</span><span class="chip">Groq inference</span><span class="chip">Llama 3.1</span><span class="chip">Record-grounded answers</span></div></div>
-          <div class="row"><h4>Privacy and Backend</h4><div class="chips"><span class="chip">48-hour automatic data purge</span><span class="chip">Python</span></div></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="proj-card">
-      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="ptags"><span class="ptag">Product</span><span class="ptag">Conversational intake</span></div></div>
-      <h3>AI Triage Assistant</h3>
-      <p class="role">Built end to end · For remote care workflows · Client: TeleSpecialists</p>
-      <p class="prose">A conversational front door for remote care. The assistant interviews the patient about symptoms, scores severity and risk, and places the case on a priority dashboard so care teams see the most urgent patients first.</p>
-      <div class="pbody">
-        <div>
-          <h4>Highlights</h4>
-          <ul class="hl">
-            <li>Guided symptom intake in natural conversation.</li>
-            <li>Severity score, risk level and priority ranking for every case.</li>
-            <li>AI avatar with synchronized lip movement (visemes) for a human-facing intake experience.</li>
-            <li>Designed to complete triage without nurse intervention for standard cases.</li>
-          </ul>
-        </div>
-        <div class="stack">
-          <div class="row"><h4>Conversation</h4><div class="chips"><span class="chip">LLM conversational intake</span><span class="chip">Guided symptom elicitation</span><span class="chip">Prompt engineering</span></div></div>
-          <div class="row"><h4>Scoring</h4><div class="chips"><span class="chip">Severity scoring</span><span class="chip">Risk stratification</span><span class="chip">Priority ranking</span></div></div>
-          <div class="row"><h4>Experience</h4><div class="chips"><span class="chip">Real-time priority dashboard</span><span class="chip">AI avatar</span><span class="chip">Viseme lip-sync</span></div></div>
-          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">REST APIs</span></div></div>
-        </div>
-      </div>
-    </article>
-
-    <article class="proj-card">
-      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div><div class="ptags"><span class="ptag">Product</span><span class="ptag">QA System</span></div></div>
-      <h3>IT Help Desk QA</h3>
-      <p class="role">Built end to end · Client: TeleSpecialists, US telehealth provider</p>
-      <p class="prose">A quality system for IT help desk operations. Incoming tickets are classified and routed automatically, and handling quality is scored and analyzed, so fewer tickets land with the wrong team and recurring issues become visible.</p>
+      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Product</span><span class="ptag">RAG</span></div></div>
+      <h3>Intelligent EMR Data RAG Chatbot</h3>
+      <p class="role">IntelliMed EMR chatbot · Designed and built end to end · RAG for physicians</p>
+      <p class="prose">A conversational layer over the electronic medical record. Physicians ask questions in plain language and get grounded answers pulled from the patient's own record across DrChrono, Azalea and Athenahealth, instead of clicking through charts.</p>
       <div class="metrics">
-        <div class="metric"><b>48% fewer</b><span>misrouted tickets</span></div>
+        <div class="metric"><b>14</b><span>Qdrant collections on Azure</span></div>
+        <div class="metric"><b>70–170</b><span>patients indexed a day</span></div>
+        <div class="metric"><b>>90%</b><span>less physician data-retrieval time (design target)</span></div>
       </div>
       <div class="pbody">
         <div>
           <h4>Highlights</h4>
           <ul class="hl">
-            <li>NLP classification routes every incoming ticket to the right queue automatically.</li>
-            <li>QA scoring and analytics surface handling quality and recurring failure patterns.</li>
-            <li>Misrouted tickets reduced by 48 percent.</li>
+            <li>Records chunked into 14 Qdrant collections on Azure with SapBERT (PubMedBERT) embeddings, which map medical synonyms and abbreviations (for example MI and heart attack) close together where general embeddings miss them.</li>
+            <li>An intent classifier (MiniLM embeddings with logistic regression) routes each query to the right collection group.</li>
+            <li>Hybrid dense and keyword retrieval with cross-encoder reranking, blended as rerank 50%, hybrid 35% and dense 15%, with question decomposition for complex queries.</li>
+            <li>Few-shot grounded generation on Groq Llama 3.1 8B Instant: answers come only from retrieved records, otherwise the system says the information is not available in the patient records.</li>
+            <li>Automatic data purge after 48 hours for privacy.</li>
           </ul>
         </div>
         <div class="stack">
-          <div class="row"><h4>Classification and Routing</h4><div class="chips"><span class="chip">NLP ticket classification</span><span class="chip">Automated queue routing</span><span class="chip">Text preprocessing</span></div></div>
-          <div class="row"><h4>Quality</h4><div class="chips"><span class="chip">QA scoring</span><span class="chip">Handling-quality analytics</span><span class="chip">Recurring-issue detection</span></div></div>
-          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">REST APIs</span></div></div>
+          <div class="row"><h4>Embeddings and Index</h4><div class="chips"><span class="chip">SapBERT (PubMedBERT)</span><span class="chip">Qdrant vector DB</span><span class="chip">Per-category collections</span><span class="chip">Metadata filtering</span></div></div>
+          <div class="row"><h4>Retrieval</h4><div class="chips"><span class="chip">Hybrid dense + keyword retrieval</span><span class="chip">Query-adaptive weighting</span><span class="chip">Cross-encoder reranking</span><span class="chip">Top-k fusion</span></div></div>
+          <div class="row"><h4>Query Understanding</h4><div class="chips"><span class="chip">MiniLM + logistic-regression intent classifier</span><span class="chip">Question decomposition</span><span class="chip">Collection routing</span></div></div>
+          <div class="row"><h4>Generation</h4><div class="chips"><span class="chip">Few-shot grounded generation</span><span class="chip">Groq inference</span><span class="chip">Llama 3.1 8B Instant</span><span class="chip">Record-grounded answers</span></div></div>
+          <div class="row"><h4>Privacy and Backend</h4><div class="chips"><span class="chip">48-hour automatic data purge</span><span class="chip">Python</span><span class="chip">Azure</span></div></div>
         </div>
       </div>
     </article>
 
-    <h3 class="eyebrow" style="margin:40px 0 16px;font-weight:400">More work</h3>
-    <div class="more">
-      <div class="card"><span class="who">SJTU, China</span><h3>GrammatiFix</h3><p>Context-aware grammatical error correction, built during my research years in Shanghai.</p><div class="chips stackline"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">NLP</span><span class="chip">Deep learning</span><span class="chip">Neural error correction</span></div></div>
-      <div class="card"><span class="who">TutorEye, USA</span><h3>TradeSphere</h3><p>Machine learning product shipped for a US-based team while working fully remote.</p><div class="chips stackline"><span class="chip">Python</span><span class="chip">Machine learning</span><span class="chip">Predictive modelling</span><span class="chip">Data analysis</span></div></div>
-      <div class="card"><span class="who">TutorEye, USA</span><h3>PortfolioPulse</h3><p>Machine learning product shipped for a US-based team while working fully remote.</p><div class="chips stackline"><span class="chip">Python</span><span class="chip">Machine learning</span><span class="chip">Predictive modelling</span><span class="chip">Data analysis</span></div></div>
+    <article class="proj-card">
+      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Voice AI</span><span class="ptag">Pre-visit intake</span></div></div>
+      <h3>AIMA: Automated Intelligent Medical Assistant</h3>
+      <p class="role">Built end to end · In production · Voice pre-visit intake for IntelliMed</p>
+      <p class="prose">A voice-based intake assistant that every IntelliMed patient goes through first. A nurse runs it to capture information and vitals; it greets the patient by name and works through a fixed clinical question set, fuller for new patients and shorter for follow-ups.</p>
+      <div class="pbody">
+        <div>
+          <h4>Highlights</h4>
+          <ul class="hl">
+            <li>Deepgram speech-to-text and text-to-speech with a gender-matched voice.</li>
+            <li>GPT-4o-mini selects each next question and produces the final structured JSON summary.</li>
+            <li>Collects information only: it never diagnoses or prescribes.</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="row"><h4>Voice</h4><div class="chips"><span class="chip">Deepgram STT</span><span class="chip">Deepgram TTS</span><span class="chip">Gender-matched voice</span></div></div>
+          <div class="row"><h4>LLM</h4><div class="chips"><span class="chip">GPT-4o-mini</span><span class="chip">Adaptive question selection</span><span class="chip">Structured JSON summary</span></div></div>
+          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj-card">
+      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Voice AI</span><span class="ptag">Stroke care</span></div></div>
+      <h3>QPS: Quality Performance Scoring</h3>
+      <p class="role">Built end to end · Post-stroke follow-up calls (90-day check-ins) · Client: TeleSpecialists</p>
+      <p class="prose">The automated audit for post-stroke follow-up calls. Recordings are pulled from Azure Blob, transcribed and scored out of 100, and each patient's Modified Rankin Scale score is derived from what the nurse asked and what the patient answered.</p>
+      <div class="metrics">
+        <div class="metric"><b>100-pt</b><span>7-parameter quality score per call</span></div>
+        <div class="metric"><b>MRS 0–6</b><span>Modified Rankin Scale scored per patient</span></div>
+        <div class="metric"><b>90-day</b><span>post-stroke follow-up check-ins</span></div>
+      </div>
+      <div class="pbody">
+        <div>
+          <h4>Highlights</h4>
+          <ul class="hl">
+            <li>Seven scored parameters: opening, empathy, interruption handling, clarity, questions answered, patient satisfaction and closing.</li>
+            <li>Each patient's MRS score combines rule-based matching of nurse questions with LLM scoring.</li>
+            <li>Deepgram Nova-2 transcription with OpenAI Whisper fallback; the full report is posted back via API. Call volume varies with how many patients are due a follow-up.</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="row"><h4>Speech</h4><div class="chips"><span class="chip">Deepgram Nova-2</span><span class="chip">OpenAI Whisper fallback</span><span class="chip">Azure Blob Storage</span></div></div>
+          <div class="row"><h4>Scoring</h4><div class="chips"><span class="chip">7-parameter rubric</span><span class="chip">Modified Rankin Scale</span><span class="chip">Rule-based matching</span><span class="chip">LLM scoring</span></div></div>
+          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">REST APIs</span><span class="chip">Docker</span></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj-card">
+      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">AI receptionist</span><span class="ptag">Kiosk</span></div></div>
+      <h3>MIRA: Medical Intelligent Receptionist Assistant</h3>
+      <p class="role">Built end to end · Runs independently alongside IntelliMed AI · Front-desk check-in</p>
+      <p class="prose">A kiosk agent that checks patients in by voice or touch, from identity to insurance to consent to copay, and hands off to the front desk the moment anything fails.</p>
+      <div class="pbody">
+        <div>
+          <h4>Highlights</h4>
+          <ul class="hl">
+            <li>Name and date of birth matched to the day's appointment in EHR 360.</li>
+            <li>Insurance card scanned: YOLO detection, Claude extraction of insurer and member ID, ClaimMD payer matching.</li>
+            <li>Consent forms signed into the EMR and the copay payment link issued.</li>
+            <li>Automatic hand-off to the front desk on any failure.</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="row"><h4>Voice and Vision</h4><div class="chips"><span class="chip">AssemblyAI</span><span class="chip">Deepgram</span><span class="chip">YOLO card detection</span></div></div>
+          <div class="row"><h4>Intelligence</h4><div class="chips"><span class="chip">Claude</span><span class="chip">Insurer and member-ID extraction</span><span class="chip">ClaimMD payer matching</span></div></div>
+          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">FastAPI</span><span class="chip">SQL Server</span><span class="chip">EHR 360</span><span class="chip">Docker</span><span class="chip">Azure App Service</span></div></div>
+        </div>
+      </div>
+    </article>
+
+    <article class="proj-card">
+      <div class="phead"><div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><div class="ptags"><span class="ptag live"><i></i>LIVE PRODUCT</span><span class="ptag">Insurance verification</span><span class="ptag">RCM</span></div></div>
+      <h3>PSR Insurance Intelligence</h3>
+      <p class="role">Built end to end · RCM platform · Client: TeleSpecialists · 40–60 calls a day</p>
+      <p class="prose">The AI audit system for outbound insurance-verification calls on the TeleSpecialists RCM platform. Every call is scored on a 13-parameter scorecard out of 130, and a six-point insurance evaluation matrix is tracked call by call.</p>
+      <div class="metrics">
+        <div class="metric"><b>130-pt</b><span>13-parameter scorecard per call</span></div>
+        <div class="metric"><b>7 outcomes</b><span>auto-categorized by a fine-tuned Llama 3.1 8B</span></div>
+        <div class="metric"><b>40–60</b><span>insurance calls audited a day</span></div>
+      </div>
+      <div class="pbody">
+        <div>
+          <h4>Highlights</h4>
+          <ul class="hl">
+            <li>Six-point insurance evaluation matrix: insurance name, member ID, effective dates, card phone number, claims address or payor ID, and card availability, each tracked as asked, missed, replied or refused.</li>
+            <li>Calls are auto-categorized into 7 outcomes by a fine-tuned Llama 3.1 8B classifier trained with QLoRA.</li>
+            <li>Same speech and scoring foundation as Voice Audit AI: Deepgram transcription with diarization, structured scoring and validation.</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <div class="row"><h4>Models</h4><div class="chips"><span class="chip">Llama 3.1 8B</span><span class="chip">QLoRA fine-tuning</span><span class="chip">Call-category classification</span></div></div>
+          <div class="row"><h4>Scoring</h4><div class="chips"><span class="chip">13-parameter scorecard</span><span class="chip">Insurance evaluation matrix</span><span class="chip">Structured JSON output</span></div></div>
+          <div class="row"><h4>Backend</h4><div class="chips"><span class="chip">Python</span><span class="chip">Deepgram</span><span class="chip">Docker</span><span class="chip">Azure</span></div></div>
+        </div>
+      </div>
+    </article>
+
+
+
+
+
+
+
+
+
+    <div class="mq-head"><h3 class="eyebrow" style="font-weight:400">More work</h3><div class="mq-nav"><button class="mq-btn" type="button" id="mqPrev" aria-label="Previous" title="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button><button class="mq-btn" type="button" id="mqNext" aria-label="Next" title="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button></div></div>
+    <div class="mq" tabindex="0" aria-label="More work">
+      <div class="mq-track"><div class="card"><span class="who">TeleSpecialists · Live</span><h3>AI Triage Assistant</h3><p>A conversational front door for remote care: interviews the patient about symptoms, scores severity and risk, and ranks cases on a priority dashboard, with an AI avatar and viseme lip-sync.</p><div class="chips stackline"><span class="chip">LLM intake</span><span class="chip">Risk scoring</span><span class="chip">Priority dashboard</span></div></div><div class="card"><span class="who">Hawklogix · Live</span><h3>Clinical Nursing Insight Extractor</h3><p>Flask service that turns nurse-patient call transcripts into structured findings (HPI, Investigation Performed, Reason for Consult) plus a summary. Strict faithfulness: anything not stated returns "Not mentioned in the call".</p><div class="chips stackline"><span class="chip">Flask</span><span class="chip">GPT, temp 0</span><span class="chip">Faithfulness rules</span></div></div><div class="card"><span class="who">TeleSpecialists · Live</span><h3>IT Help Desk QA</h3><p>Audits help-desk calls around ticket routing with a reference matrix and a 7-parameter score out of 70, using Silero VAD and Claude. 48% fewer misrouted tickets.</p><div class="chips stackline"><span class="chip">Silero VAD</span><span class="chip">Claude</span><span class="chip">Routing matrix</span></div></div><div class="card"><span class="who">SJTU, China</span><h3>GrammatiFix</h3><p>Context-aware grammatical error correction on Facebook FAIRSeq: hybrid multi-layer CNN encoder with attention-based LSTM decoder, evaluated on CoNLL-2014 and NAIST Lang-8, outperforming prior SMT approaches.</p><div class="chips stackline"><span class="chip">PyTorch</span><span class="chip">FAIRSeq</span><span class="chip">CNN + LSTM</span></div></div><div class="card"><span class="who">TutorEye, USA</span><h3>TradeSphere</h3><p>Django e-commerce platform: recommendations for personalized suggestions, customer segmentation, predictive analytics and dynamic pricing optimization.</p><div class="chips stackline"><span class="chip">Django</span><span class="chip">Recommenders</span><span class="chip">Dynamic pricing</span></div></div><div class="card"><span class="who">TutorEye, USA</span><h3>PortfolioPulse</h3><p>Feature fusion and reinforcement learning (PPO) to improve investment strategies, returns and risk-adjusted portfolio performance.</p><div class="chips stackline"><span class="chip">PPO</span><span class="chip">Feature fusion</span><span class="chip">Reinforcement learning</span></div></div><div class="card" aria-hidden="true"><span class="who">TeleSpecialists · Live</span><h3>AI Triage Assistant</h3><p>A conversational front door for remote care: interviews the patient about symptoms, scores severity and risk, and ranks cases on a priority dashboard, with an AI avatar and viseme lip-sync.</p><div class="chips stackline"><span class="chip">LLM intake</span><span class="chip">Risk scoring</span><span class="chip">Priority dashboard</span></div></div><div class="card" aria-hidden="true"><span class="who">Hawklogix · Live</span><h3>Clinical Nursing Insight Extractor</h3><p>Flask service that turns nurse-patient call transcripts into structured findings (HPI, Investigation Performed, Reason for Consult) plus a summary. Strict faithfulness: anything not stated returns "Not mentioned in the call".</p><div class="chips stackline"><span class="chip">Flask</span><span class="chip">GPT, temp 0</span><span class="chip">Faithfulness rules</span></div></div><div class="card" aria-hidden="true"><span class="who">TeleSpecialists · Live</span><h3>IT Help Desk QA</h3><p>Audits help-desk calls around ticket routing with a reference matrix and a 7-parameter score out of 70, using Silero VAD and Claude. 48% fewer misrouted tickets.</p><div class="chips stackline"><span class="chip">Silero VAD</span><span class="chip">Claude</span><span class="chip">Routing matrix</span></div></div><div class="card" aria-hidden="true"><span class="who">SJTU, China</span><h3>GrammatiFix</h3><p>Context-aware grammatical error correction on Facebook FAIRSeq: hybrid multi-layer CNN encoder with attention-based LSTM decoder, evaluated on CoNLL-2014 and NAIST Lang-8, outperforming prior SMT approaches.</p><div class="chips stackline"><span class="chip">PyTorch</span><span class="chip">FAIRSeq</span><span class="chip">CNN + LSTM</span></div></div><div class="card" aria-hidden="true"><span class="who">TutorEye, USA</span><h3>TradeSphere</h3><p>Django e-commerce platform: recommendations for personalized suggestions, customer segmentation, predictive analytics and dynamic pricing optimization.</p><div class="chips stackline"><span class="chip">Django</span><span class="chip">Recommenders</span><span class="chip">Dynamic pricing</span></div></div><div class="card" aria-hidden="true"><span class="who">TutorEye, USA</span><h3>PortfolioPulse</h3><p>Feature fusion and reinforcement learning (PPO) to improve investment strategies, returns and risk-adjusted portfolio performance.</p><div class="chips stackline"><span class="chip">PPO</span><span class="chip">Feature fusion</span><span class="chip">Reinforcement learning</span></div></div></div>
     </div>
   </section>
 
@@ -900,12 +1019,14 @@ footer .fsub a.totop svg { width: 16px; height: 16px; }
     <p class="eyebrow">~/skills</p>
     <h2 class="sec">My technical arsenal</h2>
     <div class="skills">
-      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.7 1.8L21.5 17.5l-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7L19 15z"/></svg></span>LLMs and Agents</h3><div class="chips"><span class="chip">Multi-agent orchestration</span><span class="chip">LangChain</span><span class="chip">Anthropic Claude API</span><span class="chip">OpenAI API</span><span class="chip">Llama 3.1 on Groq</span><span class="chip">Prompt engineering</span><span class="chip">Structured JSON output</span><span class="chip">Guardrails and output validation</span><span class="chip">Hallucination control</span><span class="chip">LLM evaluation</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9L12 3z"/><path d="M19 15l.7 1.8L21.5 17.5l-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7L19 15z"/></svg></span>LLMs and Agents</h3><div class="chips"><span class="chip">Multi-agent orchestration</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">Anthropic Claude API</span><span class="chip">OpenAI API</span><span class="chip">Llama 3.1 on Groq</span><span class="chip">Prompt caching</span><span class="chip">Prompt-injection defence</span><span class="chip">Prompt engineering</span><span class="chip">Structured JSON output</span><span class="chip">Guardrails and output validation</span><span class="chip">Hallucination control</span><span class="chip">LLM evaluation</span></div></div>
       <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/><path d="M8 11h6M11 8v6"/></svg></span>RAG and Retrieval</h3><div class="chips"><span class="chip">Hybrid dense + sparse retrieval</span><span class="chip">Cross-encoder reranking</span><span class="chip">Query-adaptive weighting</span><span class="chip">Intent classification</span><span class="chip">Query decomposition</span><span class="chip">Few-shot grounded generation</span><span class="chip">SapBERT embeddings</span><span class="chip">Qdrant</span><span class="chip">Metadata filtering</span></div></div>
-      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Speech and NLP</h3><div class="chips"><span class="chip">Deepgram Nova-2</span><span class="chip">OpenAI Whisper</span><span class="chip">Speaker diarization</span><span class="chip">ASR pipelines</span><span class="chip">spaCy NER</span><span class="chip">PhraseMatcher</span><span class="chip">Fuzzy and regex matching</span><span class="chip">Text classification</span><span class="chip">PyTorch</span></div></div>
-      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/><path d="M3 12h4l2-3 3 6 2-3h7"/></svg></span>Healthcare AI</h3><div class="chips"><span class="chip">FHIR</span><span class="chip">OAuth 2.0</span><span class="chip">DrChrono</span><span class="chip">Athenahealth</span><span class="chip">eClinicalWorks</span><span class="chip">ModMed</span><span class="chip">Azalea</span><span class="chip">ICD-10</span><span class="chip">CPT</span><span class="chip">MIPS</span><span class="chip">PubMed API</span><span class="chip">Clinical documentation</span></div></div>
-      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.3A6 6 0 1 0 5 16.2 4 4 0 0 0 6 20h12a5 5 0 0 0 0-10z"/></svg></span>Backend and Cloud</h3><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">REST APIs</span><span class="chip">Docker</span><span class="chip">Azure Blob Storage</span><span class="chip">AWS</span><span class="chip">Git</span></div></div>
-      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>Documents and Audio</h3><div class="chips"><span class="chip">OCR</span><span class="chip">Document classification</span><span class="chip">PDF processing</span><span class="chip">pydub</span><span class="chip">FFmpeg</span><span class="chip">Template-driven generation</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>Speech and NLP</h3><div class="chips"><span class="chip">Deepgram Nova-2</span><span class="chip">OpenAI Whisper</span><span class="chip">AssemblyAI</span><span class="chip">wav2vec 2.0</span><span class="chip">Speaker diarization</span><span class="chip">ASR pipelines</span><span class="chip">spaCy NER</span><span class="chip">PhraseMatcher</span><span class="chip">Fuzzy and regex matching</span><span class="chip">Text classification</span><span class="chip">PyTorch</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/><path d="M3 12h4l2-3 3 6 2-3h7"/></svg></span>Healthcare AI</h3><div class="chips"><span class="chip">FHIR</span><span class="chip">OAuth 2.0</span><span class="chip">DrChrono</span><span class="chip">Athenahealth</span><span class="chip">eClinicalWorks</span><span class="chip">ModMed</span><span class="chip">Azalea</span><span class="chip">ICD-10</span><span class="chip">CPT</span><span class="chip">MIPS</span><span class="chip">PubMed API</span><span class="chip">Clinical documentation</span><span class="chip">SOAP notes</span><span class="chip">HIPAA-compliant design</span><span class="chip">Five9</span><span class="chip">TeleCare</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.3A6 6 0 1 0 5 16.2 4 4 0 0 0 6 20h12a5 5 0 0 0 0-10z"/></svg></span>Backend and Cloud</h3><div class="chips"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">REST APIs</span><span class="chip">Docker</span><span class="chip">Azure App Service</span><span class="chip">Azure Blob Storage</span><span class="chip">MongoDB</span><span class="chip">SQL Server</span><span class="chip">Git and GitHub</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span>Documents and Audio</h3><div class="chips"><span class="chip">OCR cascade (DocTR, Tesseract, EasyOCR, Docling)</span><span class="chip">YOLO detection</span><span class="chip">Document classification</span><span class="chip">PDF processing</span><span class="chip">pydub</span><span class="chip">FFmpeg</span><span class="chip">Template-driven generation</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></span>Model Training</h3><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Hugging Face Transformers</span><span class="chip">LoRA / QLoRA fine-tuning</span><span class="chip">SetFit</span><span class="chip">RoBERTa</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">LightGBM</span><span class="chip">Reinforcement learning (PPO)</span><span class="chip">Macro-F1 evaluation</span></div></div>
+      <div class="card"><h3><span class="sic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span>MLOps and Observability</h3><div class="chips"><span class="chip">Docker</span><span class="chip">Azure Container Registry</span><span class="chip">Staging-slot releases</span><span class="chip">GitHub Actions CI/CD</span><span class="chip">Tag-based rollback</span><span class="chip">Log Analytics</span><span class="chip">Application Insights</span><span class="chip">Azure Monitor alerts</span><span class="chip">Health-check auto-restart</span><span class="chip">LLM cost dashboards</span></div></div>
     </div>
     <div class="marq" aria-hidden="true">
       <div class="marq-in">
@@ -973,6 +1094,57 @@ document.querySelectorAll('.copy').forEach(function (btn) {
     if (dark) h.removeAttribute('data-theme'); else h.setAttribute('data-theme', 'dark');
     try { localStorage.setItem('theme', dark ? 'light' : 'dark'); } catch (e) {}
   });
+})();
+
+(function () {
+  var mq = document.querySelector('.mq'); if (!mq) return;
+  var tr = mq.querySelector('.mq-track');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SPEED = 90, pos = 0, last = 0, hover = false, drag = false, hold = 0, sx = 0, sl = 0, moved = 0;
+  function half() { return (tr.scrollWidth + 16) / 2; }
+  function now() { return performance.now(); }
+  function pause(ms) { hold = now() + ms; }
+  function tick(t) {
+    var dt = Math.min(t - last, 50); last = t;
+    if (!reduce && !hover && !drag && t > hold) {
+      pos += SPEED * dt / 1000;
+      var h = half(); if (pos >= h) pos -= h;
+      mq.scrollLeft = pos;
+    }
+    requestAnimationFrame(tick);
+  }
+  mq.addEventListener('scroll', function () {
+    var h = half();
+    if (Math.abs(mq.scrollLeft - pos) > 2) pos = mq.scrollLeft;
+    if (mq.scrollLeft >= h) { mq.scrollLeft -= h; pos = mq.scrollLeft; }
+    else if (mq.scrollLeft <= 0 && (drag || hold > now())) { mq.scrollLeft += h; pos = mq.scrollLeft; }
+  }, { passive: true });
+  mq.addEventListener('mouseenter', function () { hover = true; });
+  mq.addEventListener('mouseleave', function () { hover = false; });
+  mq.addEventListener('focusin', function () { hover = true; });
+  mq.addEventListener('focusout', function () { hover = false; });
+  mq.addEventListener('touchstart', function () { pause(2500); }, { passive: true });
+  mq.addEventListener('touchmove', function () { pause(2500); }, { passive: true });
+  mq.addEventListener('wheel', function () { pause(2500); }, { passive: true });
+  mq.addEventListener('pointerdown', function (e) {
+    if (e.pointerType !== 'mouse' || e.button !== 0) return;
+    drag = true; moved = 0; sx = e.clientX; sl = mq.scrollLeft; mq.classList.add('drag');
+    mq.setPointerCapture(e.pointerId);
+  });
+  mq.addEventListener('pointermove', function (e) {
+    if (!drag) return;
+    moved = Math.abs(e.clientX - sx);
+    mq.scrollLeft = sl - (e.clientX - sx);
+  });
+  function end() { if (!drag) return; drag = false; mq.classList.remove('drag'); pause(1500); }
+  mq.addEventListener('pointerup', end);
+  mq.addEventListener('pointercancel', end);
+  mq.addEventListener('click', function (e) { if (moved > 5) { e.preventDefault(); e.stopPropagation(); moved = 0; } }, true);
+  function step(d) { pause(2500); mq.scrollBy({ left: d * 356, behavior: 'smooth' }); }
+  document.getElementById('mqPrev').addEventListener('click', function () { if (mq.scrollLeft < 360) { mq.scrollLeft += half(); } step(-1); });
+  document.getElementById('mqNext').addEventListener('click', function () { step(1); });
+  mq.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+  requestAnimationFrame(function (t) { last = t; tick(t); });
 })();
 </script>
 </body></html>
